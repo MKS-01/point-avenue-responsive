@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+/* Document level adjustments */
+html {
+  font-size: 17px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Modules will scale with document */
+.header {
+  font-size: 1.5rem;
+}
+.footer {
+  font-size: 0.75rem;
+}
+.sidebar {
+  font-size: 0.85rem;
+}
+
+/* Type will scale with modules */
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+
+.app {
   display: flex;
-  flex-direction: column;
+  margin: auto;
+  /* text-align: center; */
+}
+
+.body {
+  height: 500px;
+  margin: 10% 20%;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 5px 0;
+  background-color: #bdbdbd;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.passageView {
+  display: flex;
+  flex-direction: col;
+  padding: 10px 10px;
+}
+
+.row1 {
+  padding: 0 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.row2 {
+  font-size: 1rem;
+}
+
+@media (max-width: 768) {
+  .body {
+    margin: 10% 10%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 575px) {
+  .body {
+    margin: 10% 2%;
+  }
+  .row1 {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .body {
+    margin: 10% 2%;
+  }
+
+  .row1 {
+    padding: 0 2px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+  }
+
+  .row2 {
+    font-size: 0.9rem;
   }
 }
